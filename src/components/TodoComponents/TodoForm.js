@@ -8,6 +8,7 @@ class TodoForm extends Component {
                 onChange={this.props.handleTodoChanged}
                 id='newTodo'
                 name='newTodo'
+                value={this.props.newTodo}
                 />
                 <button>Add Todo</button>
                 <button>Clear Completed</button>

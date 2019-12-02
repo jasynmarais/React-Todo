@@ -20,6 +20,7 @@ class App extends React.Component {
   formSubmitted = e => {
     e.preventDefault();
     this.setState({
+      newTodo: '',
       todos: [
         ...this.state.todos,
         {
@@ -40,6 +41,7 @@ class App extends React.Component {
         <TodoForm 
           formSubmitted={this.formSubmitted}
           handleTodoChanged={this.handleTodoChanged}
+          newTodo={this.state.newTodo}
         />
         <TodoList todos={this.state.todos} />
       </div>

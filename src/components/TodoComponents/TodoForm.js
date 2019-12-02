@@ -3,8 +3,12 @@ import React, { Component } from 'react';
 class TodoForm extends Component {
     render() {
         return (
-            <form>
-                <input id='newTodo' name='newTodo' />
+            <form onSubmit={this.props.formSubmitted}>
+                <input
+                onChange={this.props.handleTodoChanged}
+                id='newTodo'
+                name='newTodo'
+                />
                 <button>Add Todo</button>
                 <button>Clear Completed</button>
             </form>
